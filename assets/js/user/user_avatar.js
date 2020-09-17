@@ -15,6 +15,7 @@ $('#btnChooseImage').on('click', function () {
   $('#file').click();
 });
 var layer = layui.layer;
+// 实现裁剪区域图片的替换
 $('#file').on('change', function (e) {
   // 获取用户选择的文件
   var filelist = e.target.files;

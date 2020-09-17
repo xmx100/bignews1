@@ -11,7 +11,7 @@ $.ajaxPrefilter(function (options) {
   // 统一执行complete函数
   options.complete = function (res) {
     // 用res.responseJSON拿到服务器响应的数据
-    // console.log(res);
+
     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
       localStorage.removeItem('token');
       location.href = '/login.html';
